@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Statistics</title>
+  <script>
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .feature-box {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #e3eaf1;
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .feature-box:hover {
+      background-color: #d0d8e2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Statistics</h1>
+  <div class="feature-box" onclick="goToFeature('task-count')">📊 Task Count</div>
+  <div class="feature-box" onclick="goToFeature('completed-tasks')">✅ Completed Tasks</div>
+  <div class="feature-box" onclick="goToFeature('pending-tasks')">⏳ Pending Tasks</div>
+
+  <script>
+    function goToFeature(feature) {
+      window.location.href = `feature.html?feature=${feature}`;
+    }
+  </script>
+</body>
+</html>

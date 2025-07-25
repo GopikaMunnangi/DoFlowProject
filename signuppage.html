@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Create Account</title>
+  
+  <style>
+    .logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+}
+
+.mini-logo {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+  cursor: pointer;
+}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('./mint design 3.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-container {
+      background-color: #ebfcee;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .signup-container button {
+      width: 80%;
+      padding: 12px;
+      background-color: #9cf0a0;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .signup-container button:hover {
+      background-color: #4e9a52;
+    }
+
+    .signup-container p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup-container a {
+      color: #2d852e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 400px) {
+      .signup-container {
+        width: 90%;
+        padding: 25px;
+      }
+
+      .signup-container h2 {
+        font-size: 20px;
+      }
+
+      .signup-container input,
+      .signup-container button {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+    .popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+   <a href="home.html" class="logo-link">
+  <img src="logo.jpg" alt="Logo" class="mini-logo">
+</a>
+    <div class="popup" id="popup">Created successfully!</div>
+
+  <div class="signup-container">
+    <h2>Create Account</h2>
+    <form onsubmit="validateForm(event)">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+ <script>
+  function validateForm(e) {
+    e.preventDefault();
+
+    const password = document.querySelector('input[placeholder="Password"]').value;
+    const confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+    const popup = document.getElementById('popup');
+
+    if (password !== confirmPassword) {
+      popup.textContent = 'Please check the details!';
+      popup.style.backgroundColor = '#f8d7da';
+      popup.style.color = '#721c24';
+    } else {
+      popup.textContent = 'Created successfully!';
+      popup.style.backgroundColor = '#d4edda';
+      popup.style.color = '#155724';
+
+      //Redirect after 2.5 seconds
+      setTimeout(() => {
+        window.location.href = 'home.html'; // replace with your home page filename
+      }, 2500);
+    }
+
+    popup.style.display = 'block';
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 2000);
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - To-Do App</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <div class="settings-container">
+    <h1 class="title">⚙️ App Settings</h1>
+
+    <div class="setting-section">
+      <h2>🌈 Appearance</h2>
+      <div class="setting-item">
+        <label for="darkMode">🌙 Enable Dark Mode</label>
+        <input type="checkbox" id="darkMode" onchange="toggleDarkMode()">
+      </div>
+      <div class="setting-item">
+        <label for="fontSize">🔠 Font Size</label>
+        <select id="fontSize">
+          <option value="small">Small</option>
+          <option value="medium" selected>Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting-section">
+      <h2>🔔 Notifications</h2>
+      <div class="setting-item">
+        <label for="emailNotif">📧 Email Notifications</label>
+        <input type="checkbox" id="emailNotif">
+      </div>
+      <div class="setting-item">
+        <label for="taskReminder">⏰ Task Reminders</label>
+        <input type="checkbox" id="taskReminder">
+      </div>
+    </div>
+
+    <div class="setting-section">
+      <h2>🧠 Productivity</h2>
+      <div class="setting-item">
+        <label for="autoSave">💾 Auto Save Tasks</label>
+        <input type="checkbox" id="autoSave">
+      </div>
+      <div class="setting-item">
+        <label for="focusMode">🧘 Focus Mode</label>
+        <input type="checkbox" id="focusMode">
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="home.html">← Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+  const darkModeCheckbox = document.getElementById("darkMode");
+
+  // Check saved theme and set checkbox
+  if (localStorage.getItem("theme") === "dark") {
+    darkModeCheckbox.checked = true;
+  }
+
+  // When checkbox changes
+  darkModeCheckbox.addEventListener("change", () => {
+    if (darkModeCheckbox.checked) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+    location.reload(); // Reload the page to apply the theme
+  });
+  </script>
+</body>
+</html>

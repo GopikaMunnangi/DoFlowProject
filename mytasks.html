@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tasks</title>
+  
+  <link rel="stylesheet" href="mytasks.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="home.html">
+      <img src="logo.jpg" alt="Logo" class="logo" /></a>
+      <h1>My Tasks</h1>
+    </header>
+
+    <div class="filters">
+      <button onclick="filterTasks('All')">All</button>
+      <button onclick="filterTasks('Pending')">Pending</button>
+      <button onclick="filterTasks('Completed')">Completed</button>
+    </div>
+
+    <div id="taskList" class="task-list"></div>
+  </div>
+
+  <script src="mytasks.js"></script>
+</body>
+</html>

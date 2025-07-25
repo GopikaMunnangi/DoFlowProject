@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./mint design 3.jpg');
+  transition: background-color 0.3s;
+}
+
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ecfeed;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: scale(1.02);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #28a745;
+  object-fit: cover;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+.profile-info input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1c7c30;
+}
+
+.stats {
+  margin-top: 25px;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 10px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: #28a745;
+  transition: width 0.5s;
+}
+
+.logout-btn {
+  background-color: red;
+  margin-top: 30px;
+}
+
+.extra-info {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.dark-mode {
+  background: linear-gradient(to right, #0f2027);
+  color: white;
+}
+
+.dark-mode .profile-container {
+  background-color: #2c2c2cbb;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode .progress-bar {
+  background: #555;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Profile</title>
+  
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="header">
+      <h2>👤 My Profile</h2>
+      <button onclick="toggleTheme()" class="theme-btn">🌓</button>
+    </div>
+
+    <div class="image-upload">
+      <img src="default-user.png" id="profileImage" class="profile-pic" />
+      <input type="file" id="upload" onchange="uploadImage()" />
+    </div>
+
+    <div class="profile-info">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <button onclick="saveProfile()">💾 Save Profile</button>
+    </div>
+
+    <div class="stats">
+      <h3>📊 Task Summary</h3>
+      <p>Total Tasks: <span id="totalTasks">0</span></p>
+      <p>Completed Tasks: <span id="completedTasks">0</span></p>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+
+    <div class="extra-info">
+      <p>🕒 Last Login: <span id="lastLogin"></span></p>
+      <p>📆 Account Created: <span id="createdOn"></span></p>
+      <p>⏱ Time on Page: <span id="sessionTime">0</span> seconds</p>
+    </div>
+
+    <button onclick="logout()" class="logout-btn">🚪 Logout</button>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

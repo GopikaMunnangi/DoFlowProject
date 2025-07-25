@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url('./mint design 3.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #eaffea;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 60px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 10px;
+}
+
+.controls span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.calendar div {
+  background-color: #fef9ef;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calendar div:hover {
+  background-color: #4e9a52;
+  color: white;
+}
+
+.task-display {
+  background-color: #cdfecf;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.task-display h2 {
+  margin-bottom: 1rem;
+}
+
+.task-display ul {
+  padding-left: 20px;
+}

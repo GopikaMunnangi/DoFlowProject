@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./mint design 3.jpg');
+  color: black;
+}
+
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ecfeed;
+  border-radius: 20px;
+  box-shadow:  5px black;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.features h2 {
+  color: black;
+}
+
+.features ul {
+  list-style-type: square;
+  padding-left: 80px;
+  margin-top: 10px;
+}
+
+.features li {
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #00ff55;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00cc44;
+}
+
+#extraMessage {
+  margin-top: 20px;
+  color: black;
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #090a0a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/* 🌐 For tablets and smaller screens (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .features h2 {
+    font-size: 22px;
+  }
+
+  .features li {
+    font-size: 15px;
+    padding-left: 16px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  #extraMessage {
+    font-size: 15px;
+  }
+
+  .footer a {
+    font-size: 15px;
+  }
+}
+
+/* 📱 For mobile phones (≤ 480px) */
+@media (max-width: 480px) {
+  .container {
+    max-width: 50%;
+    margin: 30px auto;
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .features h2 {
+    font-size: 20px;
+  }
+
+  .features li {
+    font-size: 14px;
+    padding-left: 190px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #extraMessage {
+    font-size: 13px;
+  }
+
+  .footer a {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Task</title>
+  
+  <link rel="stylesheet" href="addtask.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="home.html">
+      <img src="logo.jpg" alt="Logo" class="logo" /> </a>
+      <h1>Add Task</h1>
+    </header>
+
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Task Title" required />
+      <textarea id="description" placeholder="Task Description" required></textarea>
+      <input type="date" id="date" required />
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+        <option value="Personal">Personal</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+  </div>
+
+  <script src="js/addtask.js"></script>
+</body>
+</html>

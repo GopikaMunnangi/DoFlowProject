@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    .logo-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+}
+
+.mini-logo {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+  cursor: pointer;
+}
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('./another green.jpg');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .contact-container {
+      width: 90%;
+      max-width: 380px;
+      background-color: #eaffea;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      padding: 1em 1.2em;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      color: #2d572c;
+      font-size: 1.4em;
+      margin-bottom: 0.8em;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95em;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-container button {
+      width: 100%;
+      padding: 0.8em;
+      background-color: #a8f5b0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 0.6em;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-container button:hover {
+      background-color: #60cc6d;
+    }
+
+    .popup {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 0.8em;
+      margin-top: 0.7em;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 0.95em;
+      font-weight: 600;
+    }
+
+    /* 📱 Media Query for smaller devices */
+    @media (max-width: 480px) {
+      .contact-container {
+        padding: 0.8em;
+      }
+
+      .contact-container h2 {
+        font-size: 1.2em;
+      }
+
+      .contact-container input,
+      .contact-container textarea,
+      .contact-container button {
+        font-size: 0.85em;
+        padding: 0.6em;
+      }
+
+      .popup {
+        font-size: 0.85em;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+ <a href="home.html" class="logo-link">
+  <img src="logo.jpg" alt="Logo" class="mini-logo">
+</a>
+
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="3" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="popup" id="popup">✅ Message Sent Successfully!</div>
+  </div>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+      document.querySelectorAll('input, textarea').forEach(el => el.value = '');
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
